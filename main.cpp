@@ -100,12 +100,12 @@ void loop() {
     number = 0;
   }
 
-  thread_sleep_for(20); // Wait 20 seconds to update the channel again
+  thread_sleep_for(20000); // Wait 20 seconds to update the channel again
 }
 
 int main() {
   if(setup() == 0) 
     while(true) loop();
   else
-    while(true) thread_sleep_for(1);
+    while(true) thread_sleep_for(1000);
 }
